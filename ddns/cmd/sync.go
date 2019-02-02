@@ -48,7 +48,12 @@ var syncCmd = &cobra.Command{
 			logger.Fatal(err)
 		}
 
-		if err := client.UpsertIp(ip); err != nil {
+		dnsId, err := client.GetDnsId()
+		if err != nil {
+			logger.Fatal(err)
+		}
+
+		if err := client.UpsertIp(dnsId, ip); err != nil {
 			logger.Fatal(err)
 		}
 	},

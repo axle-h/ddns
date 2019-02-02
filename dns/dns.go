@@ -9,7 +9,7 @@ import (
 )
 
 func NewClient(configFactory config.Factory, logger log.Logger, restFactory rest.Factory) (Client, error) {
-	cfg := configFactory.DnsConfig()
+	cfg := configFactory.Dns()
 
 	logger.Debug("resolving remote DNS record with service: ", cfg.Mode)
 

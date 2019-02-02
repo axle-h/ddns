@@ -1,5 +1,7 @@
 package log
 
+//go:generate mockgen -source ./logger.go -destination ../mock/log/logger.go
+
 type Logger interface {
 	Trace(args ...interface{})
 	Tracef(format string, args ...interface{})

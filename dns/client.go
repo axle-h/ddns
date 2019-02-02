@@ -1,7 +1,9 @@
 package dns
 
 type Client interface {
-	GetCurrentIp() (string, error)
+	GetDnsId() (string, error)
 
-	UpsertIp(ip string) error
+	GetCurrentIp(dnsId string) (string, error)
+
+	UpsertIp(dnsId string, ip string) error
 }

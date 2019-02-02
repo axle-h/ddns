@@ -1,4 +1,4 @@
-package ip
+package sky_hub
 
 import (
 	"errors"
@@ -12,20 +12,19 @@ import (
 )
 
 type SkyHubScraper struct {
-	config     config.IpScrapeConfig
 	logger     log.Logger
 	restClient rest.Client
 }
 
-func NewSkyHubScraper(config config.IpScrapeConfig, logger log.Logger, restFactory rest.Factory) Scraper {
+func New(config config.IpScrape, logger log.Logger, restFactory rest.Factory) *SkyHubScraper {
 	url := "http://" + config.DefaultGateway
 	logger.Debug("sky hub scraper configured", url)
 
 	restClient := restFactory.Get(url)
-	return SkyHubScraper{config, logger, restClient}
+	return &SkyHubScraper{logger, restClient}
 }
 
-func (scraper SkyHubScraper) Scrape() (string, error) {
+func (scraper *SkyHubScraper) Scrape() (string, error) {
 	response, err := scraper.restClient.GetRaw("")
 	if err != nil {
 		return "", err
@@ -36,7 +35,7 @@ func (scraper SkyHubScraper) Scrape() (string, error) {
 	tokenizer := html.NewTokenizer(response)
 
 	inCandidate := false
-	configRegex := regexp.MustCompile("var\\s+wanDslLinkConfig\\s+=\\s+'(.+)';")
+	configRegex := regexp.MustCompile("var\\s+wanDslLinkConfig\\s+=\\s+(?:['\"])(.+)(?:['\"]);")
 	ipv4Regex := regexp.MustCompile("(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])")
 
 	for {

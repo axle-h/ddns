@@ -1,5 +1,7 @@
 package rest
 
+//go:generate mockgen -source ./client.go -destination ../mock/rest/client.go
+
 import (
 	"bytes"
 	"encoding/json"
@@ -11,7 +13,7 @@ import (
 )
 
 type Client interface {
-	Headers() map[string]string
+	SetHeader(name string, value string)
 
 	Get(url string, result interface{}) error
 
@@ -29,8 +31,8 @@ type HttpClient struct {
 	httpClient http.Client
 }
 
-func (rest *HttpClient) Headers() map[string]string {
-	return rest.headers
+func (rest *HttpClient) SetHeader(name string, value string) {
+	rest.headers[name] = value
 }
 
 func (rest *HttpClient) Do(method string, url string, request interface{}) (io.ReadCloser, error) {

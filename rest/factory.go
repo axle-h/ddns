@@ -1,5 +1,7 @@
 package rest
 
+//go:generate mockgen -source ./factory.go -destination ../mock/rest/factory.go
+
 import (
 	"github.com/axle-h/ddns/log"
 	"net/http"

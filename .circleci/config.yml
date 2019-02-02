@@ -23,5 +23,8 @@ jobs:
           paths:
             - /go/src/github.com/axle-h/ddns/vendor
       - run:
+          name: go test
+          command: go test ./...
+      - run:
           name: go build
-          command: cd ddns && go build -v
+          command: go build ./...

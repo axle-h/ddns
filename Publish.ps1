@@ -1,4 +1,5 @@
-
+go generate ./...
+go test ./...
 
 $env:GOOS="windows"; $env:GOARCH="amd64"; go install github.com/axle-h/ddns/ddns
 $env:GOOS="darwin"; $env:GOARCH="amd64"; go install github.com/axle-h/ddns/ddns

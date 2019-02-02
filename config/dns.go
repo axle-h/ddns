@@ -1,13 +1,13 @@
 package config
 
-type DnsConfig struct {
+type Dns struct {
 	Mode       string
 	Domain     string
 	SubDomain  string
 	Cloudflare CloudflareConfig
 }
 
-func (config DnsConfig) FullDomain() string {
+func (config Dns) FullDomain() string {
 	return config.SubDomain + "." + config.Domain
 }
 
@@ -19,8 +19,8 @@ type CloudflareConfig struct {
 const dnsSection = "dns"
 const cloudflareSection = "cloudflare"
 
-func (factory ViperFactory) DnsConfig() DnsConfig {
-	return DnsConfig{
+func (factory *ViperFactory) Dns() Dns {
+	return Dns{
 		Mode:      factory.string(dnsSection, "mode"),
 		Domain:    factory.string(dnsSection, "domain"),
 		SubDomain: factory.string(dnsSection, "sub_domain"),

@@ -37,7 +37,12 @@ var dnsCmd = &cobra.Command{
 			logger.Fatal(err)
 		}
 
-		ip, err := client.GetCurrentIp()
+		dnsId, err := client.GetDnsId()
+		if err != nil {
+			logger.Fatal(err)
+		}
+
+		ip, err := client.GetCurrentIp(dnsId)
 		if err != nil {
 			logger.Fatal(err)
 		}

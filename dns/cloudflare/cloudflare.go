@@ -39,69 +39,25 @@ type createOrUpdatednsRecordRequest struct {
 }
 
 type Client struct {
-	config config.DnsConfig
+	config config.Dns
 	logger log.Logger
 	rest   rest.Client
 }
 
-const dnsRecordType = "A"
+const DnsRecordType = "A"
+const ApiUrl = "https://api.cloudflare.com/client/v4"
 
-func New(config config.DnsConfig, logger log.Logger, restFactory rest.Factory) Client {
-	restClient := restFactory.Get("https://api.cloudflare.com/client/v4")
-	headers := restClient.Headers()
-	headers["Accept"] = "application/json"
-	headers["User-Agent"] = "ddns"
-	headers["X-Auth-Key"] = config.Cloudflare.ApiKey
-	headers["X-Auth-Email"] = config.Cloudflare.Email
+func New(config config.Dns, logger log.Logger, restFactory rest.Factory) Client {
+	restClient := restFactory.Get(ApiUrl)
+	restClient.SetHeader("Accept", "application/json")
+	restClient.SetHeader("User-Agent","ddns")
+	restClient.SetHeader("X-Auth-Key", config.Cloudflare.ApiKey)
+	restClient.SetHeader("X-Auth-Email", config.Cloudflare.Email)
 
 	return Client{config, logger, restClient}
 }
 
-func (client Client) GetCurrentIp() (string, error) {
-	zoneId, err := client.getZoneId()
-	if err != nil {
-		return "", err
-	}
-
-	record, err := client.getDnsRecord(zoneId)
-	if err != nil {
-		return "", err
-	}
-
-	if record == nil {
-		return "", errors.New("cannot find domain on cloudflare: " + client.config.FullDomain())
-	}
-
-	return record.Content, nil
-}
-
-func (client Client) UpsertIp(ip string) error {
-	zoneId, err := client.getZoneId()
-	if err != nil {
-		return err
-	}
-
-	record, err := client.getDnsRecord(zoneId)
-	if err != nil {
-		return err
-	}
-
-	if record == nil {
-		client.logger.Debug("cloudflare DNS record does not exist")
-		return client.createDnsRecord(zoneId, ip)
-	}
-
-	if record.Content == ip {
-		client.logger.Debug("cloudflare DNS record already in sync")
-		return nil
-	}
-
-	client.logger.Debug("cloudflare DNS record is out of date")
-	record.Content = ip
-	return client.updateDnsRecord(zoneId, record.Id, ip)
-}
-
-func (client Client) getZoneId() (string, error) {
+func (client Client) GetDnsId() (string, error) {
 	url := getUrl("zones")
 	result := getZonesResult{}
 
@@ -119,6 +75,40 @@ func (client Client) getZoneId() (string, error) {
 	return "", errors.New("cannot find zone on cloudflare: " + client.config.Domain)
 }
 
+func (client Client) GetCurrentIp(dnsId string) (string, error) {
+	record, err := client.getDnsRecord(dnsId)
+	if err != nil {
+		return "", err
+	}
+
+	if record == nil {
+		return "", errors.New("cannot find domain on cloudflare: " + client.config.FullDomain())
+	}
+
+	return record.Content, nil
+}
+
+func (client Client) UpsertIp(dnsId string, ip string) error {
+	record, err := client.getDnsRecord(dnsId)
+	if err != nil {
+		return err
+	}
+
+	if record == nil {
+		client.logger.Debug("cloudflare DNS record does not exist")
+		return client.createDnsRecord(dnsId, ip)
+	}
+
+	if record.Content == ip {
+		client.logger.Debug("cloudflare DNS record already in sync")
+		return nil
+	}
+
+	client.logger.Debug("cloudflare DNS record is out of date")
+	record.Content = ip
+	return client.updateDnsRecord(dnsId, record.Id, ip)
+}
+
 func (client Client) getDnsRecord(zoneId string) (*dnsRecord, error) {
 	url := getDnsRecordsUrl(zoneId)
 	result := getDnsRecordsResult{}
@@ -129,7 +119,7 @@ func (client Client) getDnsRecord(zoneId string) (*dnsRecord, error) {
 	qualifiedDomain := client.config.FullDomain()
 
 	for _, d := range result.DnsRecords {
-		if d.Type == dnsRecordType && d.Name == qualifiedDomain {
+		if d.Type == DnsRecordType && d.Name == qualifiedDomain {
 			client.logger.Debugf("remote domain %s resolves to %s", qualifiedDomain, d.Content)
 			return &d, nil
 		}
@@ -140,7 +130,7 @@ func (client Client) getDnsRecord(zoneId string) (*dnsRecord, error) {
 
 func (client Client) createDnsRecord(zoneId string, ip string) error {
 	request := createOrUpdatednsRecordRequest{
-		Type:    dnsRecordType,
+		Type:    DnsRecordType,
 		Content: ip,
 		Name:    client.config.FullDomain(),
 		Proxied: false,
@@ -155,7 +145,7 @@ func (client Client) createDnsRecord(zoneId string, ip string) error {
 
 func (client Client) updateDnsRecord(zoneId string, id string, ip string) error {
 	request := createOrUpdatednsRecordRequest{
-		Type:    dnsRecordType,
+		Type:    DnsRecordType,
 		Content: ip,
 		Name:    client.config.FullDomain(),
 		Proxied: false,
