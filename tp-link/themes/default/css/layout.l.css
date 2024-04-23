@@ -1,0 +1,856 @@
+/* automic class */
+.l-hide {
+	display: none !important;
+}
+
+.l-inline-block {
+	display: inline-block !important;
+}
+
+/* automic class end */
+
+/* top */
+.logo {
+	margin-left: 36px;
+}
+
+/*** login lan ***/
+.top-right {
+	position: absolute;
+	top: auto;
+	bottom: 0;
+	right: 36px;
+}
+
+#language-select {
+	display: inline-block;
+	width: 150px;
+	vertical-align: middle;
+}
+
+#language-select input.combobox-text {
+	text-align: right;
+}
+
+.func-bar-separator {
+	display: none;
+}
+
+.top-bar a.button-button span.button-text,
+.top-bar a.button-button span.button-icon {
+	display: inline-block;
+}
+
+#user-button,
+#logout-button,
+#search-button,
+#switch-mode-button,
+#quit-qs-button,
+#qs-lan-button,
+.login-lan-button {
+	width: auto;
+}
+
+.button-container.top-func-btn {
+	margin-left: 30px;
+}
+
+.button-container.top-func-btn .button-icon {
+	margin-right: 4px;
+}
+
+/* top end */
+
+/* nav */
+#navigator {
+	width: auto;
+}
+
+#navigator .navigator-wrap-outer {
+	width: 176px;
+}
+
+#main-menu li.navigator-li {
+	max-width: 138px;
+	padding: 0 16px;
+}
+
+#main-menu li.navigator-li.selected::after {
+	left: 59px;
+}
+
+/* nav end */
+
+/* page */
+.page-content-container {
+	margin-left: 175px;
+}
+
+.page-content-container .panel-container {
+	width: auto;
+}
+
+.su-grid-row,
+.page-content {
+	padding: 25px 93px 0 95px;
+}
+
+.no-navigator .su-grid-row,
+.no-navigator .page-content {
+	padding-left: 175px;
+	padding-right: 179px;
+}
+
+
+
+/* common widget */
+.qs-widget .widget-fieldlabel-wrap,
+.panel-container .widget-fieldlabel-wrap,
+.no-navigator .panel-container .widget-fieldlabel-wrap {
+	width: 245px;
+}
+
+.msg-container .widget-fieldlabel-wrap {
+	width: 221px;
+}
+
+.msg-container .label-auto .widget-fieldlabel-wrap,
+.panel-container .label-auto .widget-fieldlabel-wrap {
+	width: auto;
+}
+
+.qs-timezone .widget-fieldlabel-wrap {
+	width: 71px;
+}
+
+.panel-container .widget-wrap-outer,
+.msg-container .widget-wrap-outer {
+	width: auto;
+}
+
+.panel-container.width-label-s .widget-fieldlabel-wrap,
+.msg-container.width-label-s .widget-fieldlabel-wrap,
+.msg-container .width-label-s .widget-fieldlabel-wrap {
+	width: 155px;
+}
+
+.width-label-245 .widget-fieldlabel-wrap {
+	width: 245px;
+}
+
+.no-navigator .panel-container .widget-wrap-outer {
+	width: auto;
+}
+
+.widget-container .widget-tips {
+	white-space: normal;
+}
+
+.widget-container .widget-short-tips {
+	margin-top: 6px;
+}
+
+.widget-container.after-input .widget-fieldlabel-wrap {
+	display: none;
+}
+
+.widget-container.after-input {
+	margin: 0;
+}
+
+.l-width-label-200 .widget-fieldlabel-wrap {
+	width: 200px;
+}
+
+.l-width-label-150 .widget-fieldlabel-wrap {
+	width: 150px;
+}
+
+/* displaylabel */
+.displaylabel-container .text-wrap {
+	min-width: 245px;
+}
+
+/* displaylabel end */
+
+/* status */
+.status-container .status-wrap {
+	margin-left: 10px;
+}
+
+/* status end */
+
+/* textbox */
+.text-container {
+	white-space: nowrap;
+}
+
+.text-container .widget-wrap-outer,
+.no-navigator .text-container .widget-wrap-outer {
+	width: auto;
+}
+
+.text-container .text-wrap {
+	width: 245px;
+}
+
+.text-container.label-above.center {
+	width: 245px;
+	margin: 0 auto 12px;
+}
+
+/* tips样式在输入框的右方,为避免撑开外层容器，宽度设为0 */
+.text-container .widget-short-tips,
+.combobox-container .widget-short-tips {
+	position: static;
+	display: inline-block;
+	text-align: left;
+	max-width: 170px;
+	float: none;
+}
+
+/* 取消m中tips的样式 */
+.text-container .short-tips-content,
+.combobox-container .short-tips-content {
+	margin-top: 0;
+	margin-left: 10px;
+	margin-bottom: 0;
+	white-space: normal;
+}
+
+/* 取消m中,有tips的addon和error样式 */
+.widget-container.short-tips .widget-addon,
+.widget-container.short-tips .widget-tips,
+.widget-container.short-tips .widget-error-tips {
+	margin-top: 6px;
+	padding-right: 0;
+}
+
+.widget-container .widget-addon,
+.widget-container .widget-tips,
+.widget-container .widget-error-tips,
+.widget-container .pw-secure-check {
+	max-width: 245px;
+}
+
+.widget-container .addon-content,
+.widget-container .widget-tips .tips-content,
+.widget-container .widget-error-tips-wrap,
+.widget-container .pw-secure-check-ls {
+	width: 400px;
+}
+
+.editor-container .widget-container .addon-content,
+.editor-container .widget-container .widget-tips .tips-content,
+.editor-container .widget-container .widget-error-tips-wrap,
+.editor-container .widget-container .pw-secure-check {
+	width: 355px;
+}
+
+.widget-container.time-container .widget-addon,
+.widget-container.time-container .widget-tips,
+.widget-container.time-container .widget-error-tips {
+	max-width: 117px;
+}
+
+.widget-container.time-container .addon-content,
+.widget-container.time-container .widget-tips .tips-content,
+.widget-container.time-container .widget-error-tips-wrap {
+	width: 107px;
+}
+
+.widget-container.time-container .widget-short-tips {
+	float: right;
+}
+
+/* textbox end  *******/
+
+/* combobox  ***********/
+.combobox-container .widget-wrap-outer,
+.no-navigator .combobox-container .widget-wrap-outer {
+	width: auto;
+}
+
+.combobox-container .combobox-wrap {
+	width: 245px;
+}
+
+.qs-timezone.combobox-container .combobox-wrap {
+	width: 419px;
+}
+
+/* combobox end  *******/
+
+/* button */
+.button-container.full-line .widget-wrap-outer {
+	width: auto;
+}
+
+.button-container.full-line .button-wrap {
+	width: 245px;
+}
+
+.link-button.after-input {
+	margin-top: 2px;
+}
+
+.icon-button.after-input {
+	margin-top: 2px;
+}
+
+.icon-button.after-input .button-wrap-outer {
+	margin-left: 10px;
+}
+
+/* button end */
+
+/* file */
+.file-container .file-wrap {
+	text-align: left;
+}
+
+.file-container .file-wrap-outer .text-wrap {
+	width: 245px;
+}
+
+.file-container .file-button-container a.button-button {
+	width: 245px;
+}
+
+.file-container .file-button-container.portal-button a.button-button {
+	width: auto;
+	min-width: 84px;
+}
+
+/* file end */
+
+/* tooltip */
+.panel-container .tooltip-container {
+	position: static;
+}
+
+/* tooltip end */
+
+/* msg */
+.msg-container {
+	width: 670px;
+}
+
+.msg-container.global-alert,
+.msg-container.global-confirm,
+.msg-container.global-progress {
+	width: 670px;
+}
+
+/* msg end */
+
+/* checkbox */
+.checkbox-container .widget-wrap-outer,
+.radio-group-container .widget-wrap-outer,
+.checkbox-group-container .widget-wrap-outer {
+	max-width: 400px;
+}
+
+.checkbox-container.hidden-ssid .widget-wrap-outer {
+	max-width: 140px;
+}
+
+.no-navigator .checkbox-container .widget-wrap-outer {
+	max-width: 400px;
+}
+
+.no-navigator .checkbox-container.hidden-ssid .widget-wrap-outer {
+	max-width: 180px;
+}
+
+.checkbox-container.enable-iptv .widget-wrap-outer,
+.checkbox-container.set-separately .widget-wrap-outer {
+	max-width: 245px;
+}
+
+.editor-container .checkbox-container .widget-wrap-outer {
+	max-width: 350px;
+}
+
+.checkbox-container.after-input {
+	margin-top: 2px;
+}
+
+.checkbox-container.l-long-checkbox {
+	width: 500px;
+}
+
+.checkbox-group-container.button-group .widget-wrap-outer {
+	width: 245px;
+}
+
+.checkbox-group-container.button-group .checkbox-group-wrap {
+	width: 100%;
+}
+
+/* checkbox end */
+
+/* timer */
+.timer-container.after-input {
+	margin-top: 2px;
+}
+
+/* timer end */
+
+/* time */
+.time-container.total-2 .combobox-container,
+.time-container.total-2 .widget-container,
+.time-container.total-3 .widget-container,
+.time-container.total-3 .combobox-container {
+	margin-bottom: 0;
+}
+
+.time-container .widget-container .widget-wrap {
+	width: 117px;
+}
+
+.time-container.total-4 span.separator-1 {
+	clear: left;
+	margin-left: -13px;
+}
+
+.time-container.total-4 .combobox-container.combobox-2,
+.time-container.total-4 .widget-container.widget-2,
+.time-container.total-4 .widget-container.widget-3,
+.time-container.total-4 .combobox-container.combobox-3 {
+	margin-bottom: 0;
+}
+
+.time-container .time-sub-fieldlabel {
+	margin-left: 9px;
+}
+
+/* time end */
+
+/* paragraph */
+.paragraph-container.after-input {
+	margin-top: 6px;
+}
+
+/* paragraph end */
+
+/* advanced panel */
+.advanced-panel .panel-header {
+	margin-left: 245px;
+}
+
+.editor-container .advanced-panel .panel-header {
+	margin-left: 221px;
+}
+
+.width-label-245 .advanced-panel .panel-header {
+	margin-right: 245px;
+}
+
+/* advanced panel end */
+
+/* @devicesList */
+.devicesList-item-container {
+	margin: 0 10px 12px 0;
+	width: 306px;
+}
+
+.devicesList-item-container:nth-child(2n) {
+	margin-right: 0;
+}
+
+.devicesList-item-content {
+	padding: 16px 20px;
+}
+
+/* @devicesList end */
+
+.qs-reconnect-note-fieldset > .fieldset-content {
+	overflow: hidden;
+}
+
+/********************************  mudules  ********************************/
+
+/****** WPS ******/
+#wps-button {
+	margin-left: 260px;
+}
+
+/****** end of WPS ******/
+
+/* wirelessList */
+.wirelessList-item-content {
+	padding: 16px 20px 4px;
+	margin-bottom: 12px;
+}
+
+/* wirelessList end */
+
+/********************************  mudules  ********************************/
+
+/****** WPS ******/
+#wps-button {
+	margin-left: 260px;
+}
+
+/****** end of WPS ******/
+
+/****** Guest Network ******/
+
+#login-page-edit-msg {
+	width: 935px;
+}
+
+#login-page-edit-msg .msg-content-container {
+	padding: 24px 36px 0 48px;
+}
+
+#portal-login-config {
+	margin-top: 32px;
+	width: 585px;
+	min-height: 520px;
+}
+
+.msg-container .file-container.portal-logo-browse,
+.msg-container .file-container.portal-background-browse {
+	margin-bottom: 24px;
+}
+
+.file-container .file-wrap-outer .note {
+	margin: 8px 0 0 10px;
+}
+
+.file-container.portal-logo-browse .file-button-container,
+.file-container.portal-background-browse .file-button-container {
+	margin-top: 16px;
+}
+
+.file-container.portal-logo-browse .file-button-container.portal-button,
+.file-container.portal-background-browse .file-button-container.portal-button {
+	margin-top: 0;
+}
+
+#login-page-edit-msg .widget-container .widget-error-tips .widget-error-tips-wrap {
+	width: 100%;
+}
+
+.widget-colorpicker-wrap {
+	left: 220px;
+	margin-top: 4px;
+}
+
+.file-container .file-wrap.portal-file {
+	display: inline-block;
+	width: 245px;
+}
+
+.file-container .file-button-container.portal-button {
+	display: inline-block;
+	margin-top: 0;
+	margin-left: 12px;
+}
+
+/****** end of Guest Network ******/
+
+/****** NAT ******/
+.switch-container .widget-tips {
+	display: inline-block;
+	vertical-align: top;
+	margin-top: 4px;
+}
+
+/****** end of NAT ******/
+
+/****** ipv6 ******/
+.ipv6-container {
+	white-space: nowrap;
+}
+
+.ipv6-container .combination-wrap-outer {
+	white-space: normal;
+}
+
+.ipv6-container.total-2 .widget-container {
+	margin-bottom: 0;
+}
+
+.ipv6-container .textbox-1 .widget-wrap {
+	width: 72px;
+}
+
+.ipv6-container .textbox-0 .widget-error-tips-wrap,
+.ipv6-container .textbox-1 .widget-error-tips-wrap {
+	width: 100%;
+}
+
+.ipv6-container span.separator {
+	margin: 6px 7px 0;
+}
+
+/****** ipv6 end ******/
+
+/****** Parental Controls ******/
+.parent-control-internet-access-td .td-content {
+	position: relative;
+}
+
+.grid-content-td-action-column a.grid-content-btn.btn-internet-access.off span.text {
+	position: absolute;
+	width: 100%;
+	left: 0;
+}
+
+#parental-controls-grid_popEditor-msg .scroll,
+#parental-controls-grid-editor {
+	height: 650px;
+}
+
+.parental-ctrls-edit-fields {
+	padding: 0 61px;
+}
+
+/****** end of Parental Controls ******/
+
+/****** QoS ******/
+.qos-device-priority-grid .combobox-container .combobox-wrap {
+	width: auto;
+}
+
+/****** end of QoS ******/
+
+/************  usb  ***********/
+.storage-remove-btn .widget-fieldlabel-wrap {
+	width: 330px;
+}
+
+.printer-right-box .widget-fieldlabel-wrap {
+	width: 190px;
+}
+
+/*****  storage sharing  ****/
+.password-td .password-container {
+	margin-right: 11px;
+}
+
+/*****  storage sharing end  ****/
+
+/************  usb end  ***********/
+
+/* wireless schedule */
+.schedule-repeat {
+	margin-top: 30px;
+}
+
+.schedule-repeat .widget-fieldlabel-wrap {
+	padding-top: 7px;
+	padding-bottom: 7px;
+}
+
+/* time setting */
+.time-zone-combobox .combobox-wrap {
+	width: 330px;
+}
+
+/* time setting end */
+
+/*
+   Login module
+   ========================================================================== */
+
+.widget-wrap-auto.displaylabel-container .text-wrap,
+.login-bottom .displaylabel-container .text-wrap {
+	min-width: 0;
+}
+
+.login-main-container-page .text-container .widget-wrap-outer,
+.login-main-container-page .text-container .text-wrap,
+.login-main-container-page .button-container.full-line .widget-wrap-outer,
+.login-main-container-page .button-container.full-line .button-wrap {
+	width: 100%;
+}
+
+.login-main-container-page .widget-container .pw-secure-check,
+.login-main-container-page .widget-container .widget-error-tips {
+	max-width: 290px;
+}
+
+.login-main-container-page .widget-container .pw-secure-check-ls {
+	width: auto;
+}
+
+.login-main-container-page .widget-container .widget-error-tips-wrap {
+	width: 100%;
+}
+
+#cloud-login-pwd {
+	min-height: 74px;
+}
+
+.login-main-container-page .panel-container #tp-login-button {
+	margin-top: 0;
+}
+
+.login-secondary-container .displaylabel-container .text-wrap {
+	padding: 0;
+}
+
+#reset-pwd-new.widget-container .pw-secure-check-ls {
+	width: 375px;
+}
+
+/* login end */
+
+/* networkmap */
+.map-top-container .fieldset-content {
+	padding: 0 57px;
+}
+
+.module-networkMap.page-content {
+	padding-left: 95px;
+	padding-right: 95px;
+}
+
+.module-ispSpeedTest.page-content {
+	padding: 0;
+}
+
+.no-navigator .networkmap-panel-column .widget-fieldlabel-wrap {
+	width: 50%;
+	text-align: left;
+}
+
+.no-navigator .networkmap-panel-column .widget-wrap-outer {
+	width: 50%;
+	margin-left: 0;
+	text-align: right;
+}
+
+.networkmap-panel-column .displaylabel-container .text-wrap {
+	min-width: 0;
+}
+
+.panel-container .connected-time-displaylabel .widget-fieldlabel-wrap {
+	display: inline;
+	float: none;
+	width: auto;
+}
+
+.connected-time-displaylabel .text-wrap {
+	display: inline;
+}
+
+.networkmap-panel .internet-conn-note {
+	padding-left: 251px;
+}
+
+/* networkmap end */
+
+/* quicksetup */
+
+/* for quicksetup wireless */
+.qs-step-panel .widget-container.after-input {
+	margin-bottom: 12px;
+}
+
+.qs-step-panel .widget-container.after-input .widget-fieldlabel-wrap {
+	display: inline-block;
+}
+
+#qs-set-manual-type .checkbox-label span.text {
+	width: 243px;
+	word-wrap: break-word;
+	word-break: break-all;
+}
+
+/* quicksetup end */
+
+/* tp-link cloud */
+.tp-link-cloud-jump-container {
+	width: 245px;
+	margin: auto;
+}
+
+.tp-link-cloud-jump-container .tp-login-sign-up {
+	float: left;
+}
+
+.tp-link-cloud-jump-container .tp-login-forget-pwd {
+	float: right;
+}
+
+.qs-cloud-container .cloud-frame-field {
+	width: 626px;
+	margin-left: -63px;
+}
+
+/* tp-link cloud end */
+
+/* dhcp */
+.widget-wrap-300 .text-container .text-wrap {
+	width: 300px;
+}
+
+.widget-wrap-300 .time-container .widget-wrap {
+	width: 145px;
+}
+
+.widget-wrap-300 .combination-container span.separator {
+	margin-left: 2px;
+}
+
+.time-container.ip-pool .widget-container .widget-wrap {
+	width: 160px;
+}
+
+.widget-container.time-container.ip-pool .widget-error-tips {
+	max-width: 160px;
+}
+
+.widget-container.time-container.ip-pool .addon-content,
+.widget-container.time-container.ip-pool .widget-tips .tips-content,
+.widget-container.time-container.ip-pool .widget-error-tips-wrap {
+	width: 170px;
+}
+
+/* dhcp end */
+
+/* qos schedule */
+#schedule-time-from.combobox-container .widget-fieldlabel-inner,
+#schedule-time-to.combobox-container .widget-fieldlabel-inner,
+#qos-schedule-repeat .widget-fieldlabel-inner {
+	text-align: left;
+}
+
+#schedule-time-from.combobox-container.time-container .time-sub-fieldlabel,
+#schedule-time-to.combobox-container.time-container .time-sub-fieldlabel {
+	margin-left: 0;
+}
+
+#qos-schedule-editor .widget-container.time-container .widget-short-tips {
+	margin-left: 0;
+}
+
+/* end qos schedule */
+
+/* cloud service */
+#cloud-login-msg.msg-container {
+	width: 720px;
+}
+
+/* cloud service end */
+
+/* parental-controls-v4 start */
+#ptcr-add-dev-msg-v4 .ptcr-sel-devs .devicesList-item-container .devicesList-item-device-name,
+#ptcr-add-dev-msg-v4 .ptcr-sel-devs .devicesList-item-container .devicesList-item-mac,
+#ptcr-add-dev-msg-v4 .ptcr-sel-devs .device-wrap .name-tag-group,
+#ptcr-add-dev-msg-v4 .ptcr-sel-devs .device-wrap .mac {
+	left: 40px;
+}
+
+.msg-container .ptcr-edit-basic-info .widget-fieldlabel-wrap {
+	width: 200px;
+}
+
+/* parental-controls-v4 end */
+
+/******************************  mudules end  ******************************/

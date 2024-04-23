@@ -1,0 +1,18 @@
+@import url('layout.s.css') screen and (max-width: 767px);
+@import url('style.s.css') screen and (max-width: 767px);
+
+/* m+ */
+@import url('layout.m.css') screen and (min-width: 768px);
+@import url('style.m.css') screen and (min-width: 768px);
+
+/* m */
+@import url('layout.m.only.css') screen and (min-width: 768px) and (max-width: 1023px);
+@import url('style.m.only.css') screen and (min-width: 768px) and (max-width: 1023px);
+
+/* l+ */
+@import url('layout.l.css') screen and (min-width: 1024px);
+@import url('style.l.css') screen and (min-width: 1024px);
+
+/* xl */
+@import url('layout.xl.css') screen and (min-width: 1280px);
+@import url('style.xl.css') screen and (min-width: 1280px);

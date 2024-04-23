@@ -1,0 +1,268 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml"><head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=0">
+		<meta name="apple-touch-fullscreen" content="yes">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no">
+
+		<link rel="shortcut icon" href="themes/default/img/logo/favicon.ico">
+		<link href="themes/default/css/perfect-scrollbar.css" rel="stylesheet">
+		<!--<subuild name=supportPortal>-->
+		<link type="text/css" href="themes/default/css/spectrum.css" rel="stylesheet">
+		<link type="text/css" href="themes/default/css/jquery.Jcrop.css" rel="stylesheet">
+		<!--</subuild>-->
+
+		<link id="baseCss" type="text/css" href="themes/default/css/base.css" rel="stylesheet">
+		
+		<!--[if IE 9]>
+			<link type="text/css" href="themes/default/css/ie9.css" rel="stylesheet" />
+		<![endif]-->
+		<title id="title">Opening...</title>
+		<noscript>
+			<meta http-equiv="refresh" content="0; url=error.html" />
+		</noscript>
+	</head>
+
+	<body ontouchstart="">
+		<div id="main-container"></div>
+
+		<script type="text/javascript" src="js/libs/jquery.min.js"></script>
+		<script type="text/javascript" src="js/libs/jquery.backgroundSize.js"></script>
+		<script type="text/javascript" src="js/libs/jquery.qrcode.min.js"></script>
+		<script type="text/javascript" src="js/libs/html2canvas.min.js"></script>
+		<script type="text/javascript" src="js/libs/base64.js"></script>
+		<script type="text/javascript" src="js/libs/encrypt.js"></script>
+		<script type="text/javascript" src="js/libs/cryptoJS.min.js"></script>
+		<script type="text/javascript" src="js/libs/tpEncrypt.js"></script>
+		<script type="text/javascript" src="js/libs/polyfill.js"></script>
+		<!--<subuild name=supportPortal>-->
+		<script type="text/javascript" src="js/libs/jquery.Jcrop.js"></script>
+		<script type="text/javascript" src="js/libs/spectrum.js"></script>
+		<!--</subuild>-->
+
+		
+
+		<script type="text/javascript" src="js/app/url.js"></script>
+		<!-- <script type="text/javascript" src="js/app/url.[spf].js"></script> -->
+
+		
+		<script type="text/javascript" src="dev/dev.js"></script>
+		<script type="text/javascript" src="dev/url.js"></script>
+		
+
+		<script type="text/javascript" src="js/su/char.js"></script>
+		<script type="text/javascript" src="js/su/language.js"></script>
+
+		<script type="text/javascript">
+			try {
+				if (!localStorage || !localStorage.setItem || new Function('return !-[1,];')()) {
+					throw 'unsupported browser';
+				}
+			} catch (error) {
+				location.href = './error.html';
+			}
+			//<![CDATA[
+			try {
+				$.su.language = new $.su.Language();
+			} catch (error) {
+				location.href = './error.html';
+			}
+			//]]>
+			GLOBAL_STYLE = 'default';
+		</script>
+
+		
+		<script type="text/javascript" src="js/libs/ua-base.js"></script>
+		<script type="text/javascript" src="js/su/su.js"></script>
+
+		<script type="text/javascript" src="js/su/settings.js"></script>
+		<script type="text/javascript" src="js/su/observable.js"></script>
+		<script type="text/javascript" src="js/su/loader.js"></script>
+		<script type="text/javascript" src="js/su/class.js"></script>
+		<script type="text/javascript" src="js/su/classManager.js"></script>
+
+		<script type="text/javascript" src="js/su/view.js"></script>
+		<script type="text/javascript" src="js/su/controller.js"></script>
+		<script type="text/javascript" src="js/su/module.js"></script>
+		<script type="text/javascript" src="js/su/error.js"></script>
+		<script type="text/javascript" src="js/su/router/router.js"></script>
+		<script type="text/javascript" src="js/su/application.js"></script>
+
+		<script type="text/javascript" src="js/su/service/service.js"></script>
+		<script type="text/javascript" src="js/su/service/vtype.js"></script>
+		<script type="text/javascript" src="js/su/service/ajax.js"></script>
+		<script type="text/javascript" src="js/su/service/polling.js"></script>
+		<script type="text/javascript" src="js/su/service/moduleManager.js"></script>
+		<script type="text/javascript" src="js/su/service/moduleLoader.js"></script>
+		<script type="text/javascript" src="js/su/service/timer.js"></script>
+
+		<script type="text/javascript" src="js/su/data/model.js"></script>
+		<script type="text/javascript" src="js/su/data/dataField.js"></script>
+		<script type="text/javascript" src="js/su/data/connection.js"></script>
+		<script type="text/javascript" src="js/su/data/proxy.js"></script>
+		<script type="text/javascript" src="js/su/data/ajaxProxy.js"></script>
+		<script type="text/javascript" src="js/su/data/store.js"></script>
+
+		<script type="text/javascript" src="js/su/widget/widget.js"></script>
+		<script type="text/javascript" src="js/su/widget/scrollbar.js"></script>
+		
+		<script type="text/javascript" src="js/su/widget/window/panel.js"></script>
+		<script type="text/javascript" src="js/su/widget/window/simpleDom.js"></script>
+		<script type="text/javascript" src="js/su/widget/window/tetherApp.js"></script>
+		<script type="text/javascript" src="js/su/widget/window/tetherCard.js"></script>
+		<script type="text/javascript" src="js/su/widget/window/timeline.js"></script>
+		<script type="text/javascript" src="js/su/widget/window/networkScanList.js"></script>
+		<script type="text/javascript" src="js/su/widget/window/swiper.js"></script>
+		<script type="text/javascript" src="js/su/widget/window/qrCode.js"></script>
+
+		<script type="text/javascript" src="js/su/widget/form/form.js"></script>
+		<script type="text/javascript" src="js/su/widget/form/textbox.js"></script>
+		<script type="text/javascript" src="js/su/widget/form/ip.js"></script>
+		<script type="text/javascript" src="js/su/widget/form/mac.js"></script>
+		<script type="text/javascript" src="js/su/widget/form/textarea.js"></script>
+		<script type="text/javascript" src="js/su/widget/form/displaylabel.js"></script>
+		<script type="text/javascript" src="js/su/widget/form/combobox.js"></script>
+		<script type="text/javascript" src="js/su/widget/form/lrSelect.js"></script>
+		<script type="text/javascript" src="js/su/widget/form/radio.js"></script>
+		<script type="text/javascript" src="js/su/widget/form/checkbox.js"></script>
+		<script type="text/javascript" src="js/su/widget/form/checkboxGroup.js"></script>
+		<script type="text/javascript" src="js/su/widget/form/iconSelector.js"></script>
+		<script type="text/javascript" src="js/su/widget/form/button.js"></script>
+		<script type="text/javascript" src="js/su/widget/form/file.js"></script>
+		<script type="text/javascript" src="js/su/widget/form/progressbar.js"></script>
+		<script type="text/javascript" src="js/su/widget/form/password.js"></script>
+		<script type="text/javascript" src="js/su/widget/form/slider.js"></script>
+		<script type="text/javascript" src="js/su/widget/form/switch.js"></script>
+		<script type="text/javascript" src="js/su/widget/form/time.js"></script>
+		<script type="text/javascript" src="js/su/widget/form/datepicker.js"></script>
+		<script type="text/javascript" src="js/su/widget/form/simpleDatepicker.js"></script>
+		<script type="text/javascript" src="js/su/widget/form/timepicker.js"></script>
+		<script type="text/javascript" src="js/su/widget/form/fieldset.js"></script>
+		<script type="text/javascript" src="js/su/widget/form/toolTip.js"></script>
+		<script type="text/javascript" src="js/su/widget/form/paragraph.js"></script>
+		<script type="text/javascript" src="js/su/widget/form/errortip.js"></script>
+		<script type="text/javascript" src="js/su/widget/form/status.js"></script>
+		<script type="text/javascript" src="js/su/widget/form/tip.js"></script>
+
+		<script type="text/javascript" src="js/su/widget/grid/grid.js"></script>
+		<script type="text/javascript" src="js/su/widget/grid/tBar.js"></script>
+		<script type="text/javascript" src="js/su/widget/grid/row.js"></script>
+		<script type="text/javascript" src="js/su/widget/grid/cell.js"></script>
+		<script type="text/javascript" src="js/su/widget/grid/editor.js"></script>
+		<script type="text/javascript" src="js/su/widget/grid/rowEditor.js"></script>
+		<script type="text/javascript" src="js/su/widget/grid/popEditor.js"></script>
+		<script type="text/javascript" src="js/su/widget/grid/paging.js"></script>
+		<script type="text/javascript" src="js/su/widget/grid/sorts.js"></script>
+		<script type="text/javascript" src="js/su/widget/grid/statusBar.js"></script>
+		<script type="text/javascript" src="js/su/widget/grid/maxLimit.js"></script>
+		<script type="text/javascript" src="js/su/widget/window/msg.js"></script>
+		<script type="text/javascript" src="js/su/widget/window/noticeBar.js"></script>
+		<script type="text/javascript" src="js/su/widget/window/navigator.js"></script>
+		<script type="text/javascript" src="js/su/widget/window/panel.js"></script>
+		<script type="text/javascript" src="js/su/widget/window/htmlLoader.js"></script>
+		<script type="text/javascript" src="js/su/widget/window/mask.js"></script>
+		<script type="text/javascript" src="js/su/widget/window/loading.js"></script>
+		<script type="text/javascript" src="js/su/widget/window/echart.js"></script>
+		<script type="text/javascript" src="js/su/widget/window/accordion.js"></script>
+		<script type="text/javascript" src="js/su/widget/window/notes.js"></script>
+		<script type="text/javascript" src="js/su/widget/window/toast.js"></script>
+		<script type="text/javascript" src="js/su/widget/window/img.js"></script>
+
+		<script type="text/javascript" src="js/11axWidgets/repeatItem.js"></script>
+		<script type="text/javascript" src="js/11axWidgets/repeat.js"></script>
+		<script type="text/javascript" src="js/11axWidgets/devicesList.js"></script>
+		<script type="text/javascript" src="js/11axWidgets/searchList.js"></script>
+		<script type="text/javascript" src="js/11axWidgets/AXNavigator.js"></script>
+		<script type="text/javascript" src="js/11axWidgets/search.js"></script>
+		<script type="text/javascript" src="js/11axWidgets/timer.js"></script>
+		<script type="text/javascript" src="js/11axWidgets/wpsButton.js"></script>
+		
+		
+		<script type="text/javascript" src="js/11axWidgets/switchField.js"></script>
+		<script type="text/javascript" src="js/11axWidgets/deviceSelect.js"></script>
+		<script type="text/javascript" src="js/11axWidgets/editList.js"></script>
+		<script type="text/javascript" src="js/11axWidgets/filterLevel.js"></script>
+		<script type="text/javascript" src="js/11axWidgets/filterContent.js"></script>
+		<script type="text/javascript" src="js/11axWidgets/filterContentV2.js"></script>
+		<script type="text/javascript" src="js/11axWidgets/weekdaySelect.js"></script>
+		<script type="text/javascript" src="js/11axWidgets/commonServices.js"></script>
+		<script type="text/javascript" src="js/11axWidgets/portalPreview.js"></script>
+		<script type="text/javascript" src="js/11axWidgets/treeNode.js"></script>
+		<script type="text/javascript" src="js/11axWidgets/tree.js"></script>
+		<script type="text/javascript" src="js/11axWidgets/folderTreeNode.js"></script>
+		<script type="text/javascript" src="js/11axWidgets/folderTree.js"></script>
+		<script type="text/javascript" src="js/11axWidgets/mobileTopBar.js"></script>
+		<script type="text/javascript" src="js/11axWidgets/transition.js"></script>
+		<script type="text/javascript" src="js/11axWidgets/combination.js"></script>
+		<script type="text/javascript" src="js/11axWidgets/steps.js"></script>
+		<script type="text/javascript" src="js/11axWidgets/information.js"></script>
+		<script type="text/javascript" src="js/11axWidgets/wifiList.js"></script>
+		<script type="text/javascript" src="js/11axWidgets/storagePieChartGroup.js"></script>
+		
+		<script type="text/javascript" src="js/11axWidgets/speedTestGauge.js"></script>
+		<script type="text/javascript" src="js/11axWidgets/wifisharing.js"></script>
+		<script type="text/javascript" src="js/11axWidgets/interfaceList.js"></script>
+		<script type="text/javascript" src="js/11axWidgets/colorpicker.js"></script>
+		<script type="text/javascript" src="js/11axWidgets/imageEditor.js"></script>
+		<script type="text/javascript" src="js/11axWidgets/portalLoginPageEdit.js"></script>
+		
+		<script type="text/javascript" src="js/su/manager/manager.js"></script>
+		<script type="text/javascript" src="js/su/manager/model.js"></script>
+		<script type="text/javascript" src="js/su/manager/store.js"></script>
+		<script type="text/javascript" src="js/su/manager/module.js"></script>
+		<script type="text/javascript" src="js/su/manager/view.js"></script>
+		<script type="text/javascript" src="js/su/manager/service.js"></script>
+
+		<script type="text/javascript" src="js/su/dataBind/dataBind.js"></script>
+		<script type="text/javascript" src="js/su/dataBind/dataFieldBind.js"></script>
+		<script type="text/javascript" src="js/su/dataBind/modelBind.js"></script>
+		<script type="text/javascript" src="js/su/dataBind/storeBind.js"></script>
+
+		<script type="text/javascript" src="js/app/settings.js"></script>
+		<script type="text/javascript" src="js/app/navigator.js"></script>
+		<script type="text/javascript" src="js/app/cloudEmmitter.js"></script>
+		<script type="text/javascript" src="js/app/app.js"></script>
+		<script type="text/javascript" src="js/app/device.js"></script>
+		<script type="text/javascript" src="js/app/module.js"></script>
+		<script type="text/javascript" src="js/app/language.js"></script>
+		<script type="text/javascript" src="js/app/time.js"></script>
+
+		
+
+		
+		<script type="text/javascript" src="js/app/IPFProxy.js"></script>
+		
+
+		
+
+		<!-- subuild name=supportPreIsp -->
+		<script type="text/javascript" src="locale/ispAutoConf.js"></script>
+		<!-- subuild -->
+
+		<script type="text/javascript">
+			if ($.su.isMobile()) {
+				$('<link type="text/css" href="themes/default/css/mobile.css" rel="stylesheet" />').insertAfter('#baseCss');
+			} else {
+				$('<link type="text/css" href="themes/default/css/total.css" rel="stylesheet" />').insertAfter('#baseCss');
+			}
+		</script>
+		
+		<!--[if lt IE 9]>
+			<script type="text/javascript" src="js/libs/respond.src.js"></script>
+		<![endif]-->
+		
+
+		<script type="text/javascript">
+			$(document).ready(function (e) {
+				App = new $.su.App();
+				App.setContainer('main-container');
+				App.init().done(function () {
+					App.launch();
+				});
+			});
+		</script>
+	
+
+<!-- Google tag (gtag.js) --> <script async src="https://www.googletagmanager.com/gtag/js?id=G-JWQELGB9VX"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-JWQELGB9VX'); </script> </body></html>

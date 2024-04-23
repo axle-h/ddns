@@ -1,0 +1,1097 @@
+/* css only for 768px to 1023px, size m */
+.m-hide {
+	display: none !important;
+}
+
+/* css only for 768px to 1023px, size m */
+.m-hide {
+	display: none !important;
+}
+
+.m-hide-label .td-label {
+	display: none !important;
+}
+
+.m-invisible-label .td-label {
+	visibility: hidden !important;
+}
+
+/* common */
+.widget-container .widget-tips div.content {
+	max-width: 300px;
+}
+
+.no-navigator .widget-container .addon-content,
+.no-navigator .widget-container .widget-tips .tips-content,
+.no-navigator .widget-container .widget-error-tips-wrap {
+	max-width: none;
+	width: 160%;
+}
+
+/* common end */
+
+/* editor widget */
+.editor-container .combination-container .widget-wrap-outer,
+.editor-container .text-container .widget-wrap-outer,
+.editor-container .combobox-container .widget-wrap-outer {
+	width: 42.1%;
+}
+
+.editor-container .checkbox-container .widget-wrap-outer {
+	max-width: 42.1%;
+}
+
+/* editor widget end */
+
+/* nav */
+#main-menu li.navigator-li {
+	max-width: 15%;
+}
+
+#main-menu li.navigator-li.selected::after {
+	left: 50%;
+	transform: translate(-50%, 0);
+	transform: translate(-50%, 0);
+	transform: translate(-50%, 0);
+	transform: translate(-50%, 0);
+	transform: translate(-50%, 0);
+}
+
+/* grid */
+.m-card-grid .grid-header-container {
+	display: none;
+}
+
+.m-card-grid .grid-content-container {
+	margin-bottom: -16px; /* offset for tr margin-bottom */
+}
+
+.m-card-grid .grid-content-container-outer {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.m-card-grid .grid-container .grid-content-tr {
+	position: relative; /* for edit icon */
+	display: block;
+	overflow: hidden;
+	padding-bottom: 12px;
+	margin-bottom: 16px;
+}
+
+.m-card-grid .grid-container .grid-content-tr.hidden {
+	display: none;
+}
+
+.m-card-grid .grid-content-tr .grid-content-td {
+	display: block;
+	width: 100% !important;
+	padding: 8px 23px;
+}
+
+.m-card-grid .grid-content-tr .grid-content-td-0 {
+	display: none;
+}
+
+.m-card-grid .grid-content-tr .grid-content-td-1,
+.m-card-grid .grid-content-tr .m-first-row {
+	padding: 8px 23px;
+	margin: 0 0 12px;
+}
+
+.m-card-grid.actioncolumn .grid-content-tr .grid-content-td-1,
+.m-card-grid.actioncolumn .grid-content-tr .m-first-row {
+	padding-right: 90px;
+}
+
+.m-card-grid .grid-content-tr .grid-content-td-1 .content-separator,
+.m-card-grid .grid-content-tr .m-first-row .content-separator {
+	display: none;
+}
+
+.m-card-grid .grid-content-tr .grid-content-td-1 .td-content,
+.m-card-grid .grid-content-tr .m-first-row .td-content {
+	display: block;
+	width: auto;
+	margin-top: 4px;
+	text-align: left;
+}
+
+.m-card-grid .grid-content-tr .grid-content-td-1 .td-content .content,
+.m-card-grid .grid-content-tr .m-first-row .td-content .content {
+	margin-left: 0;
+}
+
+.m-card-grid .grid-content-tr .grid-content-td-1 .td-label,
+.m-card-grid .grid-content-tr .m-first-row .td-label {
+	display: block;
+	width: auto;
+}
+
+.m-card-grid .td-label {
+	display: inline-block;
+	width: 50%;
+	text-align: left;
+}
+
+.m-card-grid .td-content {
+	display: inline-block;
+	width: 50%;
+	text-align: right;
+}
+
+.m-card-grid .td-content .content {
+	margin-left: 10px;
+}
+
+.m-card-grid .grid-content-tr .grid-content-td-settings-column,
+.m-card-grid .grid-content-tr .grid-content-td-action-column:not(.static-action-column) {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: auto;
+	padding: 14px 20px;
+	text-align: right;
+}
+
+.m-card-grid .grid-content-tr .grid-content-td-action-column .grid-wol-wake-up-column {
+	position: relative;
+}
+
+.m-card-grid .grid-content-tr .grid-content-td-action-column:not(.static-action-column) .td-label,
+.m-card-grid .grid-content-tr .grid-content-td-settings-column .td-label {
+	display: none;
+}
+
+.m-card-grid .grid-content-tr .grid-content-td-action-column:not(.static-action-column) .td-content,
+.m-card-grid .grid-content-tr .grid-content-td-settings-column .td-content {
+	width: 100%;
+}
+
+.m-card-grid .grid-content-td.status .td-content {
+	text-align: right;
+}
+
+.m-card-grid .grid-content-td-action-column.static-action-column {
+	text-align: left;
+	padding-right: 20px;
+}
+
+.m-card-grid .grid-content-td-action-column.static-action-column .td-content {
+	height: 16px;
+}
+
+.m-card-grid .grid-content-td-action-column.static-action-column .grid-content-btn {
+	margin-top: -4px;
+}
+
+/* status */
+.m-card-grid .grid-content-tr .grid-content-td.status .td-label {
+	display: inline-block;
+	width: 50%;
+	text-align: left;
+}
+
+.m-card-grid .grid-content-tr .grid-content-td.status .td-content {
+	display: inline-block;
+	width: 50%;
+	height: 16px;
+	text-align: right;
+}
+
+.panel-container .m-card-grid .grid-content-td .switch-container,
+.panel-container .m-card-grid .grid-content-td .checkbox-container {
+	margin-top: -4px;
+}
+
+/* settings/action column btn */
+.m-card-grid a.grid-content-btn + a.grid-content-btn {
+	margin-left: 6px; /* design */
+}
+
+.m-card-grid .grid-content-tr.empty {
+	padding: 0;
+}
+
+.m-card-grid .grid-content-tr.empty td {
+	padding: 16px 24px;
+}
+
+/* grid end */
+
+/* switch */
+.panel-container .switch-wrap-outer {
+	max-width: 56%;
+}
+
+/* switch end */
+
+/* slider */
+.widget-container .slider-wrap-outer.voice-slider {
+	width: 100%;
+	text-align: right;
+}
+
+/* slider end */
+
+/* button */
+.panel-container .button-container.full-line .widget-wrap-outer {
+	width: 55.8%;
+}
+
+.no-navigator .button-container.full-line .widget-wrap-outer {
+	width: 37.5%;
+}
+
+.editor-container .button-container.full-line .widget-wrap-outer {
+	width: 42.1%;
+}
+
+.button-container.full-line .button-wrap {
+	width: 100%;
+}
+
+.link-button.after-input {
+	margin-top: -4px;
+}
+
+.icon-button.after-input {
+	margin-top: -8px;
+}
+
+.icon-button.after-input .button-wrap-outer {
+	margin-left: 10px;
+}
+
+/* button end */
+
+/* file */
+.file-container .file-button-container {
+	width: 100%;
+}
+
+.file-container .file-button-container .widget-wrap-outer {
+	width: 100%;
+	margin-left: 0;
+}
+
+/* file end */
+
+/* msg */
+.msg-container.global-alert,
+.msg-container.global-confirm,
+.msg-container.global-progress {
+	width: 630px;
+}
+
+/* msg end */
+
+/* time */
+.time-container .combobox-container,
+.time-container .text-container {
+	width: 50%;
+}
+
+.time-container .combobox-0,
+.time-container .widget-0,
+.time-container .combobox-2,
+.time-container .widget-2 {
+	padding-right: 5px;
+}
+
+.time-container .combobox-1,
+.time-container .widget-1,
+.time-container .widget-3,
+.time-container .combobox-3 {
+	padding-left: 5px;
+}
+
+.time-container.total-2 .combobox-container,
+.time-container.total-2 .widget-container {
+	margin-bottom: 0;
+}
+
+.time-container .combobox-container .widget-wrap-outer,
+.time-container .text-container .widget-wrap-outer {
+	width: 100% !important;
+}
+
+.time-container .combobox-container.combobox-2,
+.time-container .widget-container.widget-2,
+.time-container .combobox-container.combobox-3,
+.time-container .widget-container.widget-3 {
+	margin-bottom: 0;
+}
+
+.time-container span.separator {
+	position: absolute;
+	left: 50%;
+	margin-left: -3px;
+}
+
+.time-container span.separator-1 {
+	margin-left: -13px;
+	top: 41px;
+	left: 0;
+}
+
+.time-container span.separator-2 {
+	top: 41px;
+	left: 50%;
+}
+
+.time-container .time-sub-fieldlabel {
+	margin-left: 9px;
+}
+
+/* time end */
+
+/* combination */
+.combination-container .widget-wrap-outer {
+	width: 55.8%;
+}
+
+.combination-container .combobox-container .widget-wrap-outer,
+.combination-container .text-container .widget-wrap-outer {
+	width: 100% !important;
+}
+
+/* combination end */
+
+/* advanced panel */
+.advanced-panel .panel-header {
+	margin-left: 41.78%;
+}
+
+.editor-container .advanced-panel .panel-header {
+	margin-left: 38.3%;
+}
+
+.width-label-245 .advanced-panel .panel-header {
+	margin-left: 41.78%;
+}
+
+/* advanced panel end */
+
+/* @devicesList */
+.devicesList-content-container {
+	margin-right: -10px; /* -10px is enough in usual */
+	overflow: hidden;
+}
+
+.devicesList-item-container {
+	width: 50%;
+	padding-right: 10px;
+	margin-bottom: 12px;
+}
+
+.devicesList-item-content {
+	width: 100%;
+	padding: 16px 12px;
+}
+
+.devicesList-item-device-name {
+	width: 63.6%;
+}
+
+.devicename-logo-mac-list .devicesList-item-device-name {
+	left: 62px;
+}
+
+.devicename-ip-logo-mac-list .devicesList-item-device-name {
+	left: 62px;
+}
+
+.devicename-ip-logo-mac-list .devicesList-item-ip {
+	left: 62px;
+}
+
+.devicename-ip-logo-mac-list .devicesList-item-mac {
+	right: 12px;
+}
+
+.devicename-logo-mac-list .devicesList-item-mac {
+	left: 62px;
+}
+
+.devicesList-item-checkbox {
+	right: 8px;
+}
+
+.availablespace-devicename-logo-totalspace-list .devicesList-item-device-name {
+	width: auto;
+}
+
+.availablespace-devicename-logo-totalspace-list .devicesList-item-content {
+	padding: 16px 20px;
+}
+
+/* @devicesList end */
+
+/* datepicker */
+.datepicker-container .datepicker-wrap-outer {
+	width: 55.8%;
+}
+
+/* datepicker end */
+
+/********************************  mudules  ********************************/
+
+/****** Guest Network ******/
+#login-page-edit-msg {
+	width: 82%;
+}
+
+#login-page-edit-msg .msg-content-container {
+	padding: 24px 36px 0 48px;
+}
+
+#portal-left-box {
+	width: 38.2%;
+}
+
+#portal-left-box-wrapper {
+	width: 204px;
+	margin: auto;
+}
+
+#portal-login-preview {
+	zoom: 0.83;
+}
+
+#portal-login-config {
+	margin-top: 32px;
+	margin-left: -20px;
+	width: 45.9%;
+	margin-left: 12.7%;
+	min-height: 425px;
+}
+
+.m-small-style-container .widget-fieldlabel-wrap,
+.m-small-style-container .widget-wrap-outer {
+	width: 100%;
+}
+
+.m-small-style-container .widget-fieldlabel-wrap {
+	text-align: left;
+	padding: 0 0 8px;
+	height: auto;
+	transform: none;
+}
+
+.m-small-style-container .widget-fieldlabel-inner {
+	transform: none;
+}
+
+.m-small-style-container .widget-wrap-outer {
+	margin-left: 0;
+}
+
+.m-small-style-container .text-container .widget-wrap-outer {
+	width: 100%;
+}
+
+.m-small-style-container .button-container.full-line .widget-fieldlabel-wrap {
+	display: none;
+}
+
+.m-small-style-container .button-container.full-line .widget-wrap-outer {
+	width: 100%;
+}
+
+#portal-scroll-container .btn-container {
+	margin-top: 30px;
+}
+
+#portal-scroll-container .btn-container .btn-cancel + .btn-submit {
+	margin-left: 1px;
+}
+
+.portal-preview-container .text-container .widget-wrap-outer {
+	text-align: center;
+}
+
+.msg-container .file-container.portal-logo-browse,
+.msg-container .file-container.portal-background-browse {
+	margin-bottom: 24px;
+}
+
+.file-container .file-wrap-outer .note {
+	margin: 6px 0 0 10px;
+}
+
+.file-container.portal-logo-browse .file-button-container,
+.file-container.portal-background-browse .file-button-container {
+	margin-top: 16px;
+}
+
+.file-container.portal-logo-browse .file-button-container,
+.file-container.portal-background-browse .file-button-container {
+	margin-top: 0;
+}
+
+#portal-login-preview .login-button .button-wrap-outer {
+	width: auto;
+}
+
+#portal-login-preview .accept-checkbox .widget-wrap-outer {
+	max-width: 100%;
+	text-align: center;
+}
+
+.file-container .file-button-container.portal-button {
+	margin-top: 12px;
+}
+
+/****** end of Guest Network ******/
+
+/****** NAT ******/
+.switch-container .widget-tips .tips-content {
+	margin-left: 0;
+}
+
+/****** end of NAT ******/
+
+/****** ddns ******/
+#ddns-register-paragraph {
+	margin-top: 0;
+	margin-left: 41.58%;
+}
+
+/****** ddns end ******/
+
+/****** ipv6 end ******/
+.ipv6-container .combination-wrap-outer {
+	text-align: right;
+}
+
+.ipv6-container .text-container,
+.ipv6-container span.separator {
+	float: none;
+}
+
+.ipv6-container .textbox-0 {
+	width: 100%;
+}
+
+.ipv6-container .textbox-1 {
+	width: 29.3%;
+}
+
+.ipv6-container .textbox-1.widget-container {
+	margin-bottom: 0;
+}
+
+.ipv6-container .textbox-1 .widget-error-tips {
+	margin-left: -241.3%;
+}
+
+.ipv6-container span.separator {
+	margin: 6px 7px 0;
+}
+
+/****** ipv6 end ******/
+
+/****** Home Care ******/
+
+/****** Antivirus ******/
+#vulnerable-repair-btn .widget-wrap-outer {
+	width: 100%;
+}
+
+.antivirus-info .vulnerable-info-wrapper {
+	width: 44.4%;
+}
+
+/****** Antivirus end ******/
+
+/****** QoS ******/
+.qos-btn-set {
+	text-align: justify;
+}
+
+.qos-btn-set::after {
+	content: '';
+	display: inline-block;
+	width: 100%;
+}
+
+.qos-btn-container .qos-btn-wrapper {
+	margin: 0;
+}
+
+.editor-container .qos-schedule-editor .combobox-container .widget-wrap-outer {
+	width: 70%;
+}
+
+.qos-schedule-editor .time-container .combobox-container {
+	width: 28%;
+	padding: 0 5px;
+}
+
+.qos-schedule-editor .time-container span.separator {
+	position: relative;
+	left: 3px;
+}
+
+/****** end of QoS ******/
+
+/****** Parental Controls ******/
+.grid-content-td-action-column a.grid-content-btn.btn-internet-access.off {
+	position: relative;
+}
+
+.grid-content-td-action-column a.grid-content-btn.btn-internet-access.off span.text {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.grid-content-tr .grid-content-td.parent-control-internet-access-td {
+	padding-bottom: 14px;
+}
+
+#parental-ctrls-insight-switch,
+#qos-priority-tabs {
+	width: 49.2%;
+}
+
+#parental-ctrls-insight-msg .parental-ctrls-history-content {
+	width: 86.8%;
+}
+
+#parental-ctrls-insight-msg .top-10-visit-content {
+	width: 86.8%;
+}
+
+#parental-ctrls-edit-switch {
+	width: 64.2%;
+}
+
+.parental-ctrls-edit-fields {
+	padding: 36px 47px 0;
+}
+
+#parental-controls-grid_popEditor-msg .scroll,
+#parental-controls-grid-editor {
+	height: 650px;
+}
+
+#parental-controls-grid-editor .fieldset-container.basic-info {
+	width: 49%;
+}
+
+.widget-container.label-above .widget-fieldlabel-wrap,
+.widget-container.label-above .widget-wrap-outer {
+	width: 100%;
+}
+
+.widget-container.label-above.center {
+	width: 55.8%;
+	margin: 0 auto 12px;
+}
+
+.device-list-wrapper {
+	margin: 0 -22px;
+	text-align: justify;
+	line-height: 0; /* for layout standin */
+}
+
+.device-list-wrapper::after {
+	content: '';
+	display: inline-block;
+	width: 100%;
+	height: 0;
+}
+
+.device-list-wrapper .layout-stand-in {
+	display: inline-block;
+	width: 50px;
+	margin: 0 22px;
+	vertical-align: top;
+}
+
+.filter-level-wrapper {
+	width: 66%;
+	margin: auto;
+}
+
+.filter-level-items {
+	margin: 0 -35px;
+	text-align: justify;
+}
+
+.filter-level-items::after {
+	display: inline-block;
+	width: 100%;
+	content: '';
+}
+
+.filter-level-items .items {
+	margin-left: 9px;
+	margin-right: 9px;
+}
+
+.filter-content-container .text-container {
+	width: 49%;
+}
+
+.filter-content-container .text-container .widget-wrap-outer {
+	width: 100%;
+}
+
+.fieldset-container.time-controls .widget-fieldlabel-wrap {
+	width: 32%;
+}
+
+.steps-ul {
+	width: 66%;
+}
+
+/****** end of Parental Controls ******/
+
+/****** end of Home Care ******/
+
+/********  system log  *********/
+.combobox-container.information-filter-cb {
+	width: 55.8%;
+}
+
+.combobox-container.information-filter-cb .widget-fieldlabel-wrap {
+	width: auto;
+}
+
+.combobox-container.information-filter-cb .combobox-wrap {
+	width: 100%;
+}
+
+.information-panel-tbar-container .search-container .search-text-wrap {
+	display: block;
+	width: 55.8%;
+}
+
+.information-panel-tbar-container .search-container .search-result-wrap {
+	margin-left: 0;
+	margin-top: 12px;
+}
+
+/********  system log end  *********/
+
+/************  usb  *************/
+.storage-pie-chart-group-pie-chart-wrap {
+	width: 41.78%;
+}
+
+.storage-pie-chart-group-table-chart-wrap {
+	width: 55.8%;
+}
+
+.storage-pie-chart-group-pie-chart {
+	width: 125px;
+	height: 125px;
+	margin-left: 0;
+	margin-top: 22px;
+}
+
+.printer-left-box {
+	width: 27.3%;
+	margin-left: 0;
+}
+
+.printer-right-box {
+	width: 72%;
+}
+
+.printer-right-box .widget-fieldlabel-wrap {
+	width: 57.2%;
+}
+
+/*****  storage sharing  ****/
+.access-address-port-td .text-container .widget-wrap-outer {
+	width: 50px;
+}
+
+.access-address-td .td-label {
+	vertical-align: top;
+}
+
+.access-method-td-jump-container {
+	margin-top: 6px;
+}
+
+.password-td .password-container input {
+	text-align: right;
+}
+
+.password-td .password-container .allow-visible-wrapper {
+	right: -1px;
+}
+
+.select-folder-folderTree {
+	margin-left: 20px;
+}
+
+/*****  storage sharing end  ****/
+
+/************  usb end  *************/
+
+/* wireless schedule */
+.schedule-repeat {
+	margin-top: 30px;
+}
+
+.schedule-repeat .widget-fieldlabel-wrap {
+	padding-top: 7px;
+	padding-bottom: 7px;
+}
+
+.wireless-schedule-repeat-wrap-outer {
+	width: 342px;
+}
+
+.wireless-schedule-repeat-container ul {
+	display: block;
+	margin: 0;
+	text-align: justify;
+	line-height: 0;
+	font-size: 0;
+}
+
+.wireless-schedule-repeat-container ul::after {
+	content: '';
+	display: inline-block;
+	width: 100%;
+}
+
+.wireless-schedule-repeat-container ul li {
+	width: 30px;
+}
+
+.wireless-schedule-repeat-container ul li .icon {
+	margin: 0;
+}
+
+/* wireless schedule end */
+
+/* Login module */
+
+.login-secondary-container .top {
+	display: block;
+}
+
+.login-bottom {
+	display: none;
+}
+
+.login-view .page-inner {
+	border-radius: 0;
+}
+
+.login-secondary-container .text-container .widget-wrap-outer,
+.login-secondary-container .panel-container .button-container.full-line .widget-wrap-outer {
+	width: 245px;
+}
+
+/*  Login module end */
+
+/* quickSetup */
+.quick-setup-view .page-content {
+	width: 65.1%;
+	min-width: 520px;
+}
+
+.quick-setup-view .widget-fieldlabel-wrap {
+	width: 49%;
+}
+
+.quick-setup-view .qs-timezone .widget-fieldlabel-wrap {
+	width: 15%;
+}
+
+.quick-setup-view .checkbox-container .widget-wrap-outer,
+.quick-setup-view .combobox-container .widget-wrap-outer,
+.quick-setup-view .text-container .widget-wrap-outer {
+	width: 49%;
+}
+
+.quick-setup-view .combobox-container.qs-timezone .widget-wrap-outer {
+	width: 83%;
+}
+
+.quick-setup-view .widget-container.label-above .widget-wrap-outer {
+	width: 100%;
+}
+
+.quick-setup-view .advanced-panel .panel-header {
+	margin-left: 49%;
+}
+
+.qs-set-pwd-view .button-container.full-line .widget-wrap-outer {
+	width: 49%;
+}
+
+.quick-setup-view .button-container.inline-block.full-line,
+.quick-setup-view .button-container.full-line .button-wrap-outer {
+	width: 49%;
+}
+
+.quick-setup-view .button-container.inline-block.full-line .widget-wrap-outer,
+.quick-setup-view .button-container.inline-block.full-line .widget-wrap {
+	width: 100%;
+}
+
+.combobox-container.qs-lan-cb .widget-wrap-outer {
+	width: 100%;
+}
+
+.progressbar-container.after-button {
+	width: 49%;
+}
+
+.progressbar-container.after-button .progressbar-wrap-outer,
+.progressbar-container.after-button .progressbar-wrap,
+.progressbar-container.after-button .progressbar-content {
+	width: 100%;
+}
+
+/* change mode */
+.qs-change-mode-radio {
+	width: 74.6%;
+	min-width: 500px;
+}
+
+/* operation mode */
+.operation-mode-radio .img-container .img {
+	width: 410px;
+}
+
+/* internet connect */
+.app-publicity {
+	width: 49%;
+	min-width: 245px;
+}
+
+/* qs cloud */
+.qs-cloud-form-container,
+.qs-cloud-sign-forget-container {
+	width: 49%;
+}
+
+@media screen and (max-width: 973px) {
+	div.qs-cloud-container .cloud-frame-field {
+		width: 122%;
+		margin-left: auto;
+		margin-right: auto;
+		position: relative;
+		left: -11%;
+	}
+}
+
+/* qs cloud */
+#qs-set-manual-type.checkbox-container .widget-wrap-outer {
+	width: 49%;
+}
+
+#qs-set-manual-type .checkbox-label span.text {
+	word-wrap: break-word;
+	word-break: break-all;
+}
+
+/* quickSetup end */
+
+/* access control */
+.m-card-grid .grid-content-tr .grid-content-td.icon40 .td-label {
+	display: inline-block;
+	width: 50%;
+	text-align: left;
+}
+
+.m-card-grid .grid-content-tr .grid-content-td.icon40 .td-content {
+	position: relative;
+	display: inline-block;
+	width: 50%;
+	height: 16px;
+	text-align: right;
+}
+
+.panel-container .m-card-grid .grid-content-td.icon40 .icon {
+	position: absolute;
+	right: 0;
+	top: -12px;
+}
+
+/* access control end */
+
+/* networkmap */
+.no-navigator .networkmap-panel-column .widget-fieldlabel-wrap {
+	width: 50%;
+	text-align: left;
+}
+
+.no-navigator .networkmap-panel-column .widget-wrap-outer {
+	width: 50%;
+	text-align: right;
+}
+
+.performance-echart-wrap {
+	width: 258px;
+	height: 140px;
+}
+
+.cpu-container .cpu-after {
+	width: 258px;
+}
+
+/* networkmap end */
+
+/* tp-link cloud */
+.tp-link-cloud-jump-container {
+	width: 55.8%;
+	margin: auto;
+}
+
+.tp-link-cloud-jump-container .tp-login-sign-up {
+	float: left;
+}
+
+.tp-link-cloud-jump-container .tp-login-forget-pwd {
+	float: right;
+}
+
+/* tp-link cloud end */
+
+/* wifisharing @start */
+.wifisharing-container.after-input {
+	margin-left: 41.58%;
+}
+
+.no-navigator .wifisharing-container.after-input {
+	margin-left: 37.5%;
+}
+
+/* wifisharing @end */
+
+/* cloud service */
+#cloud-login-msg.msg-container {
+	width: 720px;
+}
+
+/* cloud service end */
+
+/* parental-controls-v4 start */
+.widget-container.label-above.profile-name-age-box .widget-fieldlabel-wrap {
+	width: 200px;
+}
+
+/* parental-controls-v4 end */
+
+/* device boost start */
+
+#selected-device-list .grid-content-td-action-column a.grid-content-btn.until-select {
+	margin-left: 0;
+	position: relative;
+}
+
+/* device boost end */
+
+/********************************  mudules  ********************************/
