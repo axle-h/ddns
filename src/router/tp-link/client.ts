@@ -1,8 +1,6 @@
 import { TpEncrypt } from "./tp-encrypt"
 import { Country, Device, EncryptionKey, Language, PasswordKey, RouterResponse, Status } from "./types"
 
-const ROUTER_HOST = '10.0.0.1'
-
 async function assertOk(response: Response) {
     if (response.status !== 200) {
         throw new Error(`request failed ${response.status} ${response.statusText}: ${await response.text()}`)
@@ -10,7 +8,7 @@ async function assertOk(response: Response) {
 }
 
 export class PlainTextClient {
-    constructor(private readonly host: string = ROUTER_HOST) {}
+    constructor(private readonly host: string) {}
 
     private async luci<T>(stok: string, body: string): Promise<T> {
         const response = await fetch(
@@ -68,7 +66,7 @@ export class EncryptedClient {
 
     constructor(
         private readonly encryption: TpEncrypt,
-        private readonly host: string = ROUTER_HOST
+        private readonly host: string
     ) {}
 
     private async luci<T>(stok: string, payload: string): Promise<T> {

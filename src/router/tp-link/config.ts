@@ -10,7 +10,8 @@ export class Config {
         public readonly encryptionKey: EncryptionKey
     ) {}
 
-    static async build(client: PlainTextClient = new PlainTextClient()): Promise<Config> {
+    static async build(host: string): Promise<Config> {
+        const client = new PlainTextClient(host)
         return new Config(
             await client.getDevice(),
             await client.getLang(),
