@@ -9,10 +9,13 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "jsbn": "^1.1.0",
     "ts-node": "^10.9.2",
     "typescript": "^5.4.5"
   },
   "devDependencies": {
+    "@types/crypto-js": "^4.2.2",
+    "@types/jsbn": "^1.2.33",
     "@types/node": "^20.12.7"
   }
 }
