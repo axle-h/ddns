@@ -1,0 +1,15 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: ddns
+spec:
+  schedule: "0 * * * *"
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+            - name: ddns
+              image: ghcr.io/axle-h/ddns:latest
+              imagePullPolicy: Always
+          restartPolicy: OnFailure

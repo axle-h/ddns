@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: ddns
+data:
+  DNS_TYPE: Porkbun
+  DNS_API_KEY: YOUR_PORKBUN_API_KEY
+  DNS_SECRET_KEY: YOUR_PORKBUN_SECRET_KEY
+  DOMAINS: home.example.com
+  ROUTER_TYPE: TpLink
+  ROUTER_HOST: 192.168.0.1
+  ROUTER_PASSWORD: YOUR_ROUTER_PASSWORD
