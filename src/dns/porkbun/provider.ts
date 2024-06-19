@@ -46,5 +46,4 @@ export class PorkbunDnsProvider implements DnsProvider {
         return domainRecords.flatMap(({domain, dns}) =>
             dns.map(record => ({...record, domain})))
     }
-
 }

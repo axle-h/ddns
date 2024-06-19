@@ -9,10 +9,6 @@
         "sourceMap": true,
         "outDir": "dist",
         "baseUrl": ".",
-        "allowJs": false,
-        "declaration": true,
-        "declarationMap": true,
-        "emitDeclarationOnly": true,
         "paths": {
             "*": [
                 "node_modules/*",

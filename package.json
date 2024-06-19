@@ -3,19 +3,22 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "start": "ts-node src/main.ts"
+    "start": "ts-node src/main.ts",
+    "build": "tsc",
+    "clean": "rimraf ./dist"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "jsbn": "^1.1.0",
-    "ts-node": "^10.9.2",
-    "typescript": "^5.4.5"
+    "jsbn": "^1.1.0"
   },
   "devDependencies": {
     "@types/crypto-js": "^4.2.2",
     "@types/jsbn": "^1.2.33",
-    "@types/node": "^20.12.7"
+    "@types/node": "^20.14.6",
+    "rimraf": "^5.0.7",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5"
   }
 }

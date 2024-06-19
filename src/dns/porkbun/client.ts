@@ -1,6 +1,3 @@
-import {DnsProvider} from "../provider";
-
-
 export class PorkbunClient {
     constructor(
         private readonly apikey: string,
