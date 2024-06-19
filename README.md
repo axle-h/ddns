@@ -23,10 +23,16 @@ Use Kubernetes.
 1. Edit the configmap in `./k8s/configmap.yml` (add a secret if you want, I just don't let bad actors have my k8s keys)
 2. Change the cron spec in `./k8s/cronjob.yml`
 3. Apply
-    ```shell
-    kubectl create namespace ddns
-    kubectl --namespace ddns apply -f ./k8s
-    ```
+   ```shell
+   kubectl create namespace ddns
+   kubectl --namespace ddns apply -f ./k8s
+   ```
+4. If you want to run it now to test it then
+   ```shell
+   kubectl --namespace ddns create job --from=cronjob.batch/ddns test1
+   # and to see the log
+   kubectl --namespace ddns logs job.batch/test1
+   ```
 
 ## TP-Link
 
