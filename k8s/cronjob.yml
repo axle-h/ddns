@@ -12,4 +12,7 @@ spec:
             - name: ddns
               image: ghcr.io/axle-h/ddns:latest
               imagePullPolicy: Always
+              envFrom:
+                - configMapRef:
+                    name: ddns
           restartPolicy: OnFailure

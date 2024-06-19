@@ -11,7 +11,7 @@ async function main() {
 
     if (domains.length === 0) {
         console.error('must provide DOMAINS')
-        return
+        process.exit(1)
     }
 
     const routerConfig: RouterConfig = {
@@ -21,7 +21,7 @@ async function main() {
     }
     if (!routerConfig.host || !routerConfig.password) {
         console.error('must provide ROUTER_HOST & ROUTER_PASSWORD')
-        return
+        process.exit(1)
     }
 
     const dnsConfig: DnsProviderConfig = {
@@ -31,7 +31,7 @@ async function main() {
     }
     if (!dnsConfig.apiKey || !dnsConfig.secretKey) {
         console.error('must provide DNS_API_KEY & DNS_SECRET_KEY')
-        return
+        process.exit(1)
     }
 
     const dnsProvider = buildDnsProvider(dnsConfig)
