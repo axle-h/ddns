@@ -2,7 +2,7 @@ export class PorkbunClient {
     constructor(
         private readonly apikey: string,
         private readonly secretKey: string,
-        private readonly baseAddress: string = 'https://porkbun.com') {
+        private readonly baseAddress: string = 'https://api.porkbun.com') {
     }
 
     async listDomains(): Promise<Domain[]> {
