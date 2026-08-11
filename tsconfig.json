@@ -1,20 +1,15 @@
 {
     "compilerOptions": {
-        "module": "commonjs",
+        "module": "node20",
         "esModuleInterop": true,
         "allowSyntheticDefaultImports": true,
         "target": "es2022",
+        "strict": false,
         "noImplicitAny": true,
-        "moduleResolution": "node",
+        "types": ["node"],
         "sourceMap": true,
-        "outDir": "dist",
-        "baseUrl": ".",
-        "paths": {
-            "*": [
-                "node_modules/*",
-                "src/types/*"
-            ]
-        }
+        "rootDir": "src",
+        "outDir": "dist"
     },
     "include": [
         "src/**/*"
