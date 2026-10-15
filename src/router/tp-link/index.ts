@@ -13,6 +13,10 @@ export class TpLinkRouter implements Router {
         }
     }
 
+    async logout(): Promise<void> {
+        await this.client.logout()
+    }
+
     static async build(host: string, password: string): Promise<TpLinkRouter> {
         const config = await Config.build(host)
         const tpEncrypt = new TpEncrypt(config, password)

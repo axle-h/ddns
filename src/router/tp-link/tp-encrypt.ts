@@ -21,7 +21,7 @@ export class TpEncrypt {
         this.passwordRsa = new RsaPublicEncryption(config.passwordKey.password)
         this.aes = new AesCrypto()
         this.rsa = new RsaPublicEncryption(config.encryptionKey.key)
-        this.hash = crypto.createHash(config.isRgSec ? 'sha256' : 'md5').update(USERNAME + pwd).digest('hex'),
+        this.hash = crypto.createHash(config.isRgSec ? 'sha256' : 'md5').update(USERNAME + pwd).digest('hex')
         this.seq = config.encryptionKey.seq
     }
 

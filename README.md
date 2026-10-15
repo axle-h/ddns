@@ -20,14 +20,21 @@ I couldn't find one so I made this. The process is:
 
 Use Kubernetes.
 
-1. Edit the configmap in `./k8s/configmap.yml` (add a secret if you want, I just don't let bad actors have my k8s keys)
+1. Edit the configmap in `./k8s/configmap.yml`
 2. Change the cron spec in `./k8s/cronjob.yml`
-3. Apply
+3. Create the namespace & secret
    ```shell
    kubectl create namespace ddns
+   kubectl --namespace ddns create secret generic ddns \
+     --from-literal=DNS_API_KEY=YOUR_PORKBUN_API_KEY \
+     --from-literal=DNS_SECRET_KEY=YOUR_PORKBUN_SECRET_KEY \
+     --from-literal=ROUTER_PASSWORD=YOUR_ROUTER_PASSWORD
+   ```
+4. Apply
+   ```shell
    kubectl --namespace ddns apply -f ./k8s
    ```
-4. If you want to run it now to test it then
+5. If you want to run it now to test it then
    ```shell
    kubectl --namespace ddns create job --from=cronjob.batch/ddns test1
    # and to see the log
@@ -52,6 +59,4 @@ In any case, the Javascript on the emulator is **not** minified and even include
 
 I don't know what I would have done without this. I even managed to identify a third party package used for RSA encryption and found it on npm!
 
-By the way, I tried using node:crypto to no avail.
-I think either the padding scheme deviates from PKCS #1 (advertised) in some way or the cipher itself is more lenient on padding (at the expense of security).
-In either case, I cannot be bothered to figure it out so I depend on a weird `jsbn` package written by some Stanford student called Tom 15 years ago.
+It turns out the padding is plain PKCS #1 v1.5, so `node:crypto` handles the RSA with a public key built from the router's modulus & exponent.

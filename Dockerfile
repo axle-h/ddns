@@ -16,4 +16,6 @@ RUN npm ci --omit=dev
 
 COPY --from=build /app/dist .
 
+USER node
+
 CMD ["node", "main.js"]

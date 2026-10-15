@@ -26,7 +26,7 @@ export class PlainTextClient {
     
         const result = (await response.json()) as RouterResponse<T>
         if (result.success !== true) {
-            throw new Error(`result does not indicate success: ${result}`)
+            throw new Error(`result does not indicate success: ${JSON.stringify(result)}`)
         }
         return result.data
     }
@@ -88,7 +88,12 @@ export class EncryptedClient {
         await assertOk(response)
 
         const encryptedResult = await response.json()
-        const result = JSON.parse(this.encryption.dataDecrypt(encryptedResult.data)) as RouterResponse<T>
+        let result: RouterResponse<T>
+        try {
+            result = JSON.parse(this.encryption.dataDecrypt(encryptedResult.data))
+        } catch (e) {
+            throw new Error(`cannot decrypt router response: ${JSON.stringify(encryptedResult)}`, { cause: e })
+        }
     
         if (result.success !== true) {
             throw new Error(`result does not indicate success: ${JSON.stringify(result)}`)
@@ -99,12 +104,12 @@ export class EncryptedClient {
     }
 
     private parseCookies(response: Response) {
-        const newCookies = response.headers.getSetCookie()
-            .map(entry => entry.split(';', 2)[0])
-            .map(cookie => cookie.split('=', 2))
-        
-        for (const [k, v] of newCookies) {
-            this.cookies[k] = v
+        for (const entry of response.headers.getSetCookie()) {
+            const cookie = entry.split(';', 1)[0]
+            const i = cookie.indexOf('=')
+            if (i > 0) {
+                this.cookies[cookie.substring(0, i)] = cookie.substring(i + 1)
+            }
         }
     }
 
@@ -116,6 +121,12 @@ export class EncryptedClient {
 
     async status(): Promise<Status> {
         return this.luci('/admin/status?form=all', 'operation=read')
+    }
+
+    // the router only allows one admin session, so leaving it open locks out the web ui
+    async logout(): Promise<void> {
+        await this.luci('/admin/system?form=logout', 'operation=write')
+        this.session = ''
     }
 }
 

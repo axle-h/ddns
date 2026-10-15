@@ -19,10 +19,12 @@ export class PorkbunClient {
         await this.request(
             `/api/json/v3/dns/edit/${domain}/${record.id}`,
             {
-                // this api does not support a FQ domain
-                name: record.name.replace(new RegExp(`\.${domain}$`), ''),
+                // this api does not support a FQ domain, the apex is an empty name
+                name: record.name === domain ? '' : record.name.slice(0, -(domain.length + 1)),
                 type: record.type,
-                content: record.content
+                content: record.content,
+                // otherwise reset to the default
+                ttl: record.ttl
             }
         )
     }
@@ -36,6 +38,9 @@ export class PorkbunClient {
             }),
             method: 'POST'
         })
+        if (!response.ok && !response.headers.get('content-type')?.includes('json')) {
+            throw new Error(`porkbun api response ${response.status} ${response.statusText}`)
+        }
         const body: R = await response.json()
         if (body.status !== 'SUCCESS') {
             throw new Error(`porkbun api response ${body.status} ${body.message}`)
@@ -62,6 +67,7 @@ export interface DnsRecord {
     name: string // 'home.example.com'
     type: string // 'A'
     content: string // '8.8.8.8'
+    ttl: string // '600'
 }
 
 interface ListDnsRecordsResponse extends PorkbunResponse {

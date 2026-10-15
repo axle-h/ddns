@@ -7,6 +7,8 @@ spec:
   concurrencyPolicy: Forbid
   jobTemplate:
     spec:
+      # a hung run would otherwise block every future run
+      activeDeadlineSeconds: 300
       template:
         spec:
           containers:
@@ -16,4 +18,11 @@ spec:
               envFrom:
                 - configMapRef:
                     name: ddns
+                - secretRef:
+                    name: ddns
+              securityContext:
+                runAsNonRoot: true
+                runAsUser: 1000 # node
+                allowPrivilegeEscalation: false
+                readOnlyRootFilesystem: true
           restartPolicy: OnFailure
