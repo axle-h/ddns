@@ -4,14 +4,11 @@ import {DnsRecord, PorkbunClient} from "./client";
 export class PorkbunDnsProvider implements DnsProvider {
     constructor(private readonly client: PorkbunClient) {}
 
-    private dnsRecords: Promise<(DnsRecord & { domain: string })[]> | null = null
+    private domains: Promise<string[]> | null = null
+    private dnsRecords = new Map<string, Promise<(DnsRecord & { domain: string })[]>>()
 
     async setDnsRecord(domain: string, wanAddress: string): Promise<void> {
-        if (this.dnsRecords === null) {
-            this.dnsRecords = this.getDnsRecords()
-        }
-
-        const dnsRecords = await this.dnsRecords
+        const dnsRecords = await this.getDnsRecords(domain)
         const record = dnsRecords.find(record =>
             record.name === domain && record.type === 'A')
 
@@ -35,15 +32,25 @@ export class PorkbunDnsProvider implements DnsProvider {
         record.content = wanAddress
     }
 
-    private async getDnsRecords() {
-        const domains = await this.client.listDomains()
-        const domainRecords = await Promise.all(
-            domains.map(async domain => ({
-                domain: domain.domain,
-                dns: await this.client.listDnsRecords(domain.domain)
-            }))
-        )
-        return domainRecords.flatMap(({domain, dns}) =>
-            dns.map(record => ({...record, domain})))
+    // only query the zone that owns the hostname, other domains in the account may not have API access
+    private async getDnsRecords(hostname: string) {
+        if (this.domains === null) {
+            this.domains = this.client.listDomains()
+                .then(domains => domains.map(domain => domain.domain))
+        }
+
+        const domain = (await this.domains)
+            .find(domain => hostname === domain || hostname.endsWith(`.${domain}`))
+        if (!domain) {
+            return []
+        }
+
+        let dnsRecords = this.dnsRecords.get(domain)
+        if (!dnsRecords) {
+            dnsRecords = this.client.listDnsRecords(domain)
+                .then(records => records.map(record => ({...record, domain})))
+            this.dnsRecords.set(domain, dnsRecords)
+        }
+        return dnsRecords
     }
 }
